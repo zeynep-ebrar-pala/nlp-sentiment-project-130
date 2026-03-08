@@ -1,0 +1,9 @@
+streamlit
+google-generativeai
+python-dotenv
+fastapi
+uvicorn
+pydantic
+tensorflow
+transformers
+torch
