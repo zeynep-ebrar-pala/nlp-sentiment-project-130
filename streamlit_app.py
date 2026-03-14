@@ -55,14 +55,16 @@ def get_gemini_sentiment(text):
 
                       Text: "{text}"
                       """
-                      response = model.generate_content(prompt)
-                      content = response.text
-                      match = re.search(r'\{.*\}', content, re.DOTALL)
-                      if match:
-                          return json.loads(match.group())
-                  except Exception as e:
-                      st.error(f"Gemini API Hatasi: {e}")
-                  return None
+                          response = model.generate_content(prompt)
+                content = response.text
+                        match = re.search(r'\{.*\}', content, re.DOTALL)
+                                if match:
+                    return json.loads(match.group())
+                        except Exception as e:
+                                st.error(f"Gemini API Hatasi: {e}")
+                                    return None
+
+                                    
 
               def heuristic_analysis(text):
                   text_lower = text.lower()
